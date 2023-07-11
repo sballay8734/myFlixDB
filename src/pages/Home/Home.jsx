@@ -1,7 +1,12 @@
 import "./home.scss"
+import HeroSection from "./heroSection/HeroSection"
 
 function Home() {
-  return <div>Home</div>
+  return (
+    <div className="home-page">
+      <HeroSection />
+    </div>
+  )
 }
 
 export default Home
