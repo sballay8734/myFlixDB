@@ -3,12 +3,12 @@
     background-color: white;
     border-radius: 20px;
     padding: 2px;
-    .tabItems {
+    .tab-items {
         display: flex;
         align-items: center;
         height: 30px;
         position: relative;
-        .tabItem {
+        .tab-item {
             height: 100%;
             display: flex;
             align-items: center;
@@ -24,7 +24,7 @@
                 color: white;
             }
         }
-        .movingBg {
+        .moving-background {
             height: 30px;
             width: 100px;
             border-radius: 15px;
