@@ -2,6 +2,7 @@ import "./home.scss"
 import HeroSection from "./heroSection/HeroSection"
 import Trending from "./Trending/Trending"
 import Popular from "./Popular/Popular"
+import TopRated from "./TopRated/TopRated"
 
 function Home() {
   return (
@@ -9,7 +10,7 @@ function Home() {
       <HeroSection />
       <Trending />
       <Popular />
-      <div style={{ height: 1000 }}></div>
+      <TopRated />
     </div>
   )
 }

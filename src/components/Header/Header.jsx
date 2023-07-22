@@ -6,7 +6,7 @@ import { SlMenu } from "react-icons/sl"
 import { VscChromeClose } from "react-icons/vsc"
 import { useNavigate, useLocation } from "react-router-dom"
 import ContentWrapper from "../contentWrapper/ContentWrapper"
-import logo from "../../assets/myFlix-logo.svg"
+import logo from "../../assets/myFlix-favicon.png"
 
 const Header = () => {
   const [show, setShow] = useState("top")
