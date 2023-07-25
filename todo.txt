@@ -1,3 +1,4 @@
 1. Add functionality to social icons (Could just be a message saying they're just for show)
 2. Background img/hero needs to expand more on bigger screens
 3. Change Logo to say "MyFlix"
+4. Paragraph in movie description is too long sometimes causing overflow and "Top Cast" to look wrong.

@@ -15,7 +15,7 @@ import PosterFallback from "../../assets/no-poster.png"
 import CircleRating from "../CircleRating/CircleRating"
 import Genres from "../Genres/Genres"
 
-function Carousel({ data, loading, endpoint }) {
+function Carousel({ data, loading, endpoint, title }) {
   const carouselContainer = useRef()
   const { url } = useSelector((state) => state.home)
   const navigate = useNavigate()
@@ -49,6 +49,7 @@ function Carousel({ data, loading, endpoint }) {
   return (
     <div className="carousel">
       <ContentWrapper>
+        {title && <div className="carousel-title">{title}</div>}
         <BsFillArrowLeftCircleFill
           className="carousel-left-nav arrow"
           onClick={() => navigation("left")}
