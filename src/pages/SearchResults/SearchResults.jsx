@@ -6,9 +6,10 @@ import InfiniteScroll from "react-infinite-scroll-component"
 
 import { fetchData } from "../../utils/api"
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
-// import MovieCard from "../../components/movieCard/MovieCard";
-// import Spinner from "../../components/spinner/Spinner";
+import MovieCard from "../../components/MovieCard/MovieCard"
+import Spinner from "../../components/Spinner/Spinner"
 import noResults from "../../assets/no-results.png"
+import Img from "../../components/LazyLoadImg/LazyLoadImg"
 
 const SearchResults = () => {
   const [data, setData] = useState(null)
@@ -30,7 +31,7 @@ const SearchResults = () => {
       if (data?.results) {
         setData({
           ...data,
-          results: [...data?.results, ...res.results]
+          results: [...data.results, ...res.results]
         })
       } else {
         setData(res)
@@ -70,7 +71,12 @@ const SearchResults = () => {
               </InfiniteScroll>
             </>
           ) : (
-            <span className="result-not-found">Sorry, Results not found!</span>
+            <div className="no-results">
+              <span className="result-not-found">
+                Sorry, Results not found!
+              </span>
+              <Img className="no-result-img" src={noResults} />
+            </div>
           )}
         </ContentWrapper>
       )}

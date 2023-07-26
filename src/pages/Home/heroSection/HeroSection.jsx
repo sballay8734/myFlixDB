@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import useFetch from "../../../hooks/useFetch"
 import { useSelector } from "react-redux"
 import LazyLoadImg from "../../../components/LazyLoadImg/LazyLoadImg"
-import ContentWrapper from "../../../components/ContentWrapper/ContentWrapper"
+import ContentWrapper from "../../../components/contentWrapper/ContentWrapper"
 
 function HeroSection() {
   const [backgroundImg, setBackgroundImg] = useState("")
@@ -23,6 +23,13 @@ function HeroSection() {
 
   function queryHandler(e) {
     if (e.key === "Enter" && query.length > 0) {
+      navigate(`/search/${query}`)
+      setQuery("")
+    }
+  }
+
+  function searchClickHandler() {
+    if (query.length > 0) {
       navigate(`/search/${query}`)
       setQuery("")
     }
@@ -53,7 +60,7 @@ function HeroSection() {
                 onKeyUp={queryHandler}
                 value={query}
               />
-              <button>Search</button>
+              <button onClick={searchClickHandler}>Search</button>
             </div>
           </div>
         </div>
