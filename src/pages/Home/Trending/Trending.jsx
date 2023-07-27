@@ -1,5 +1,5 @@
 import "../home.scss"
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper"
+import ContentWrapper from "../../../components/ContentWrapper/ContentWrapper"
 import TabSwitch from "../../../components/TabSwitch/TabSwitch"
 import { useState } from "react"
 import useFetch from "../../../hooks/useFetch"

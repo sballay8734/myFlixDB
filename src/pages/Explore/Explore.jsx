@@ -7,7 +7,7 @@ import "./explore.scss"
 
 import useFetch from "../../hooks/useFetch"
 import { fetchData } from "../../utils/api"
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper"
+import ContentWrapper from "../../components/ContentWrapper/ContentWrapper"
 import MovieCard from "../../components/MovieCard/MovieCard"
 import Spinner from "../../components/Spinner/Spinner"
 

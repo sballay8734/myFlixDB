@@ -6,7 +6,7 @@ import dayjs from "dayjs"
 
 import "./banner.scss"
 
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper"
+import ContentWrapper from "../../../components/ContentWrapper/ContentWrapper"
 import useFetch from "../../../hooks/useFetch"
 import Genres from "../../../components/Genres/Genres"
 import CircleRating from "../../../components/CircleRating/CircleRating"

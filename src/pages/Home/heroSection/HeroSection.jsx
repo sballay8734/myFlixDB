@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import useFetch from "../../../hooks/useFetch"
 import { useSelector } from "react-redux"
 import LazyLoadImg from "../../../components/LazyLoadImg/LazyLoadImg"
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper"
+import ContentWrapper from "../../../components/ContentWrapper/ContentWrapper"
 
 function HeroSection() {
   const [backgroundImg, setBackgroundImg] = useState("")

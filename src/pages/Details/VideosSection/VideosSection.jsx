@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./videos-section.scss"
 
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper"
+import ContentWrapper from "../../../components/ContentWrapper/ContentWrapper"
 import Img from "../../../components/LazyLoadImg/LazyLoadImg"
 import PlayButton from "../Banner/PlayButton"
 
