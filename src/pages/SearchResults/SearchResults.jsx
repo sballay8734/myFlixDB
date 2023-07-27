@@ -15,12 +15,12 @@ const SearchResults = () => {
   const [data, setData] = useState(null)
   const [pageNum, setPageNum] = useState(1)
   const [loading, setLoading] = useState(false)
-  const [sortParam, setSortParam] = useState("descending")
+  // const [sortParam, setSortParam] = useState("descending")
   const { query } = useParams()
 
-  function handleSortSelect(param) {
-    setSortParam(param)
-  }
+  // function handleSortSelect(param) {
+  //   setSortParam(param)
+  // }
 
   function fetchInitialData() {
     setLoading(true)
