@@ -1,7 +1,27 @@
+import { useState } from "react"
 import "./footer.scss"
 import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa"
+import { createPortal } from "react-dom"
 
 function Footer() {
+  const [modalIsShown, setModalIsShown] = useState(false)
+  const [modalText, setModalText] = useState("")
+
+  function showModal() {
+    document.body.classList.add("hide-overflow")
+    setModalIsShown(true)
+  }
+
+  function hideModal() {
+    document.body.classList.remove("hide-overflow")
+    setModalIsShown(false)
+  }
+
+  function handleClick(iconName) {
+    setModalText(iconName)
+    showModal()
+  }
+
   return (
     <footer className="footer">
       <div className="footer-wrapper">
@@ -21,20 +41,34 @@ function Footer() {
           pariatur.
         </div>
         <div className="socialIcons">
-          <span className="icon">
+          <span className="icon" onClick={() => handleClick("Facebook")}>
             <FaFacebookF />
           </span>
-          <span className="icon">
+          <span className="icon" onClick={() => handleClick("Instagram")}>
             <FaInstagram />
           </span>
-          <span className="icon">
+          <span className="icon" onClick={() => handleClick("Twitter")}>
             <FaTwitter />
           </span>
-          <span className="icon">
+          <span className="icon" onClick={() => handleClick("LinkedIn")}>
             <FaLinkedin />
           </span>
         </div>
       </div>
+      {modalIsShown
+        ? createPortal(
+            <div className="modal">
+              <div className="opacity-layer-modal" onClick={hideModal}></div>
+              <div className="modal-content">
+                <div>Currently, {modalText} link is just for show!</div>
+                <button className="close-modal" onClick={hideModal}>
+                  Close Modal
+                </button>
+              </div>
+            </div>,
+            document.querySelector(".modal-container")
+          )
+        : ""}
     </footer>
   )
 }

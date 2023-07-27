@@ -1,2 +1,1 @@
-1. Add functionality to social icons (Could just be a message saying they're just for show)
 5. Sort data by release year.

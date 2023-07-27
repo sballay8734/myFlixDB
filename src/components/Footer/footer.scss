@@ -1,4 +1,45 @@
 @import "../../mixins.scss";
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.modal-content {
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.close-modal {
+    border: none;
+    padding: 0.5rem 1rem;
+    background-color: var(--black3);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 0.1rem;
+    margin-top: 2rem;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(42, 42, 42);
+    }
+}
+.opacity-layer-modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.8;
+}
 .footer-wrapper {
   display: flex;
   flex-direction: column;
@@ -6,6 +47,9 @@
   justify-content: center;
   padding: 0 1rem;
 
+}
+.hide-overflow {
+    overflow: hidden;
 }
 .footer {
     background-color: var(--black3);

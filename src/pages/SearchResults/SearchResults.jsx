@@ -15,7 +15,12 @@ const SearchResults = () => {
   const [data, setData] = useState(null)
   const [pageNum, setPageNum] = useState(1)
   const [loading, setLoading] = useState(false)
+  const [sortParam, setSortParam] = useState("descending")
   const { query } = useParams()
+
+  function handleSortSelect(param) {
+    setSortParam(param)
+  }
 
   function fetchInitialData() {
     setLoading(true)
@@ -57,6 +62,24 @@ const SearchResults = () => {
                   data?.total_results > 1 ? "results" : "result"
                 } of '${query}'`}
               </div>
+              {/* <div className="sort-by-buttons">
+                <button
+                  onClick={() => handleSortSelect("ascending")}
+                  className={`sort-button ${
+                    sortParam === "ascending" ? "selected" : ""
+                  }`}
+                >
+                  Year Ascending
+                </button>
+                <button
+                  onClick={() => handleSortSelect("descending")}
+                  className={`sort-button ${
+                    sortParam === "descending" ? "selected" : ""
+                  }`}
+                >
+                  Year Descending
+                </button>
+              </div> */}
               <InfiniteScroll
                 className="content"
                 dataLength={data?.results?.length || []}
